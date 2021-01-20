@@ -1,0 +1,32 @@
+mybatis:
+  type-aliases-package: com.example.demo.model.po
+  configuration:
+    map-underscore-to-camel-case: true
+pagehelper:
+  offsetAsPageNum: true
+  pageSizeZero: true
+  params: pageNum=pageHelperStart;pageSize=pageHelperRows;
+  reasonable: false
+  rowBoundsWithCount: true
+  supportMethodsArguments: false
+server:
+  servlet:
+    context-path: /demo
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  port: 8080
+spring:
+  application:
+    name: demo
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  mvc:
+    converters:
+      preferred-json-mapper: gson
+logging:
+  file:
+    path: ./logs
